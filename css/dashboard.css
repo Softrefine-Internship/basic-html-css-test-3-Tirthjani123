@@ -6,7 +6,7 @@
 .dashboard {
   /* background-color: red; */
   width: 1200px;
-  height: 85vh;
+  height:145vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -20,14 +20,13 @@
 .section-header {
   background: linear-gradient(
       0deg,
-      rgba(10, 69, 232, 0.3),
+      rgba(255, 255, 255, 0.3),
       rgba(46, 40, 88, 0.811)
     ),
     url("../img/mountain-banner.jpg");
-  background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 30%;
-  padding: 8px 24px;
+  height: 275px;
+  padding: 8px 32px;
 }
 
 .main-nav {
@@ -59,7 +58,7 @@
 
 .help-btn {
   background-color: rgba(255, 255, 255, 0.1);
-  height: 100%;
+  height: 25px;
   color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
@@ -92,17 +91,190 @@
 
 /* USER PROFILE */
 .user-profile {
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
 
 .user-photo {
-  height: 15%;
-  width: 15%;
+  position: absolute;
+  height: 220px;
+  width: 230px;
+  z-index: 999;
+  border-radius: 2px;
 }
 
 /* USER DETAILS */
+.user-details {
+  width: 50%;
+  margin-left: 220px;
+}
+
+.user-photo {
+  margin-right: 24px;
+}
+
 .greetings {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 24px;
+  font-size: 32px;
+  margin-left: 24px;
+}
+
+.user-details-list {
+  padding-left: 0;
+  list-style: none;
+  margin-left: 24px;
+}
+
+.user-details-info {
+  color: rgba(255, 255, 255, 0.8);
+}
+.user-details-list-title {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* User Progress */
+.user-progress {
+  /* align-self: flex-end; */
+  justify-self: end;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.35);
+  width: 370px;
+  height: 130px;
+}
+.progress-indicator {
+  width: 40%;
+  display: flex;
+}
+.outer-circle-progress {
+  justify-self: center;
+  align-self: center;
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
+  rotate: 45deg;
+  border: 4px solid #fca424;
+  border-top: 4px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer-circle-progress:hover {
+  cursor: pointer;
+}
+.inner-circle-progress {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  rotate: -45deg;
+}
+
+.progress-details {
+  width: 60%;
+  padding: 24px 0;
+}
+
+.progress-details span {
+  display: block;
+}
+.progress-details :nth-child(1) {
+  color: white;
+  font-size: 20px;
+}
+
+.progress-details :nth-child(2) {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.progress-details :nth-child(3) {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  background-color: #fca424;
+  border: none;
+  padding: 4px 16px;
+}
+.progress-details :nth-child(3):hover {
+  cursor: pointer;
+}
+
+/* DASHBOARD CONTENT */
+.dashboard-content {
+  width: 100%;
+  /* height: 400px; */
+  display: flex;
+  flex-direction: row;
+}
+
+/* ABOUT MY FAMILY */
+.user-family-details {
+  width: 22%;
+  padding-top: 24px;
+  margin-left: 32px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.tittle {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  margin-top: 24px;
+  font-weight: 600;
+  margin-right: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 12px;
+}
+
+.tittle .div {
+  width: 100%;
+  display: inline;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.user-family-details .ion-icon {
+  padding-left: 10px;
+}
+
+.covered-person-tittle {
+  padding: 18px 0;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform:uppercase;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.covered-person-pictures{
+  display: flex;
+  gap: 12px;
+}
+.covered-person-pictures:nth-child(1) img,.covered-person-pictures:nth-child(2) img{
+  height: 50px;
+  border-radius: 50%;
+}
+.personal-details{
+  padding: 12px  0;
+}
+.personal-details .head{
+  /* padding: 18px 0 0 0; */
+  font-weight: bold;
+  font-size: 14px;
+  text-transform:uppercase;
+  color: rgba(0, 0, 0, 0.3);
+}
+.personal-details .content{
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  
+}
+/* DASHBOARD CONTENT */
+.dashboard-page {
+  width: 66.67%;
 }
