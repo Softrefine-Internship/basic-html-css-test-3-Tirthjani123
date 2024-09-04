@@ -6,7 +6,7 @@
 .dashboard {
   /* background-color: red; */
   width: 1200px;
-  height:145vh;
+  /* height: 145vh; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -209,7 +209,6 @@
 
 /* DASHBOARD CONTENT */
 .dashboard-content {
-  width: 100%;
   /* height: 400px; */
   display: flex;
   flex-direction: row;
@@ -219,7 +218,9 @@
 .user-family-details {
   width: 22%;
   padding-top: 24px;
-  margin-left: 32px;
+  padding-left: 24px;
+  padding-right: 12px;
+  padding-bottom: 24px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .tittle {
@@ -248,35 +249,241 @@
   padding: 18px 0;
   font-weight: bold;
   font-size: 14px;
-  text-transform:uppercase;
+  text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.covered-person-pictures{
+.covered-person-pictures {
   display: flex;
   gap: 12px;
 }
-.covered-person-pictures:nth-child(1) img,.covered-person-pictures:nth-child(2) img{
+.covered-person-pictures:nth-child(1) img,
+.covered-person-pictures:nth-child(2) img {
   height: 50px;
   border-radius: 50%;
 }
-.personal-details{
-  padding: 12px  0;
+.personal-details {
+  padding-top: 12px;
 }
-.personal-details .head{
+.personal-details .head {
   /* padding: 18px 0 0 0; */
   font-weight: bold;
   font-size: 14px;
-  text-transform:uppercase;
+  text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
 }
-.personal-details .content{
-  font-size: 14px;
+.personal-details .content {
+  font-size: 12px;
   color: rgba(0, 0, 0, 0.7);
   font-weight: bold;
-  
 }
 /* DASHBOARD CONTENT */
 .dashboard-page {
-  width: 66.67%;
+  width: 100%;
+}
+
+/* Navigation bar */
+.dashboard-nav {
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* gap: 3px; */
+  /* justify-content: space-around; */
+}
+.dashboard-nav a {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  margin: 0 12px;
+  padding: 18px 0;
+  text-transform: uppercase;
+  /* background-color: aqua; */
+}
+.dashboard-nav .ion-icon {
+  margin: 0 10px;
+}
+.dashboard-nav a:first-child {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #fca424;
+}
+.dashboard-nav a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+}
+.dashboard-nav a:first-child:hover {
+  color: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #fca424;
+}
+.dashboard-nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1ad09d;
+  margin: 12px;
+  padding: 0 6px;
+  border-radius: 4%;
+  margin-left: 10%;
+  /* text-align: center; */
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.4s;
+}
+.dashboard-nav div:hover {
+  cursor: pointer;
+  background-color: #3dc19b;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Dashboard main content */
+.dashboard-user-content {
+  height: inherit;
+  margin: 24px 12px;
+  margin-right: 64px;
+}
+
+/* Claim Cards */
+.claim-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 15%;
+  gap: 20px;
+}
+.claim-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 16px 16px;
+  transition: all 0.3s;
+}
+.claim-card:hover {
+  transform: translateY(-10px);
+}
+.claim-number {
+  font-size: 54px;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.6);
+}
+.claim-details {
+  padding: 0 12px;
+  font-size: large;
+  text-transform: uppercase;
+}
+.claim-details-heading {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+}
+.photos {
+  display: flex;
+}
+.photos img,
+.photos .last {
+  height: 25px;
+  width: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-size: contain;
+  position: relative;
+}
+.photos .last::after {
+  content: "+32";
+  font-size: small;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: #1ad09d;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  opacity: 0.8;
+}
+.photos .last,
+.photos img {
+  margin-right: -10px;
+}
+
+/* CENTER SECTION */
+
+.center-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 73%;
+  /* background-color: #3dc19b; */
+  margin: 12px;
+  margin-right: 64px;
+}
+
+/* Clients-Account */
+.clients-account {
+  /* background-color: aqua; */
+}
+.client-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* background-color: beige; */
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 0 12px 24px 12px;
+  position: relative;
+}
+.pay-button{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px 20px;
+  background-color: #fca424;
+  bottom: 24px;
+  right: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+}
+
+.pay-button ion-icon{
+  margin-right: 5px;
+}
+
+.client-card img {
+  margin: 12px;
+  height: 130px;
+  border-radius: 3%;
+}
+
+.client-card .client-details {
+  margin: 12px;
+}
+
+.client-name {
+  text-transform:uppercase ;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.client-details-list {
+  padding: 0;
+  list-style: none;
+  margin: 12px 0;
+  font-weight: 600;
+}
+.client-details-list li {
+  padding: 4px 0;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.client-details-list-tittle {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.clients-activity {
+  background-color: blueviolet;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
