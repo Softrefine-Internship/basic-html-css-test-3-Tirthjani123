@@ -4,18 +4,26 @@
 
 /* DASHBOARD RELATED CSS ONLY */
 .dashboard {
-  /* background-color: red; */
   width: 1200px;
-  /* height: 145vh; */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  z-index:  999;
+  background-color: #fff;
 }
 
 /* HEADER SECTION */
+
+.bell-icon::before{
+position: absolute;
+top: 0px;
+right: 0px;
+height: 10px;
+width: 10px;
+background-color: #fab041;
+}
 
 .section-header {
   background: linear-gradient(
@@ -65,9 +73,12 @@
   justify-content: center;
   font-size: 12px;
   padding: 0 10px;
+  transition: all 0.3s;
 }
 .help-btn:hover {
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .bell-icon {
@@ -135,12 +146,11 @@
 
 /* User Progress */
 .user-progress {
-  /* align-self: flex-end; */
   justify-self: end;
   display: flex;
   background-color: rgba(255, 255, 255, 0.35);
   width: 370px;
-  height: 130px;
+  height: 160px;
 }
 .progress-indicator {
   width: 40%;
@@ -173,7 +183,7 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.1);
   rotate: -45deg;
-  color: white;
+  color: rgba(255, 255, 255, 0.6);
   font-weight: bold;
 }
 
@@ -192,19 +202,25 @@
 
 .progress-details :nth-child(2) {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 12px;
 }
 
 .progress-details :nth-child(3) {
   color: rgba(255, 255, 255, 0.6);
   font-size: 18px;
-  background-color: #fca424;
+  text-transform: uppercase;
+  background-color: #fab041;
   border: none;
   padding: 4px 16px;
 }
 .progress-details :nth-child(3):hover {
   cursor: pointer;
+  /* transform: translateY(-5px); */
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fca424;
+  color: rgba(255, 255, 255, 1);
+  transition: all 0.2s ease-in-out; 
 }
 
 /* DASHBOARD CONTENT */
@@ -288,9 +304,6 @@
   width: 100%;
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  /* gap: 3px; */
-  /* justify-content: space-around; */
-  /* transition: all 5s ease-in 1000ms; */
 }
 .dashboard-nav a {
   font-size: 14px;
@@ -299,7 +312,6 @@
   margin: 0 12px;
   padding: 18px 0;
   text-transform: uppercase;
-  /* background-color: aqua; */
 }
 .dashboard-nav .ion-icon {
   margin: 0 10px;
@@ -310,8 +322,8 @@
   border-bottom: 2px solid #fca424;
 }
 .dashboard-nav a:hover {
-  color: rgba(0, 0, 0, 0.6);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #fca424;
 }
 .dashboard-nav a:first-child:hover {
   color: rgba(0, 0, 0, 0.7);
@@ -326,9 +338,9 @@
   padding: 0 6px;
   border-radius: 4%;
   margin-left: 10%;
-  /* text-align: center; */
+  border-radius: 3px;
   color: rgba(255, 255, 255, 0.7);
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 .dashboard-nav div:hover {
   cursor: pointer;
@@ -340,7 +352,7 @@
 .dashboard-user-content {
   height: inherit;
   margin: 24px 12px;
-  margin-right: 64px;
+  margin-right: 50px;
 }
 
 /* Claim Cards */
@@ -360,12 +372,12 @@
   transition: all 0.3s;
 }
 .claim-card:hover {
-  /* transform: translateY(-10px); */
   transform: translateY(-5px);
-  box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
 .claim-number {
-  font-size: 54px;
+  font-family: "Dosis", sans-serif;
+  font-size: 40px;
   text-align: center;
   border-right: 1px solid rgba(0, 0, 0, 0.6);
 }
@@ -420,32 +432,31 @@
 .center-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  height: 73%;
+  /* height: 73%; */
   /* background-color: #3dc19b; */
   margin: 12px;
   margin-right: 64px;
 }
 
 /* Clients-Account */
-.clients-account {
-  /* background-color: aqua; */
-}
+.clients-account {}
 .client-card {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   /* background-color: beige; */
+  border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin: 0 12px 24px 12px;
   position: relative;
   transition: all 0.2s;
 }
-.client-card:hover{
+.client-card:hover {
   cursor: pointer;
   transform: translateY(5px);
   box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.25);
 }
 
-.pay-button{
+.pay-button {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -455,11 +466,18 @@
   background-color: #fca424;
   bottom: 24px;
   right: 24px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
+  transition: all 0.45s;
+  text-transform: uppercase;
+}
+.pay-button:hover {
+  /* font-weight: bold; */
+  background-color: #e89b28f8;
+  color: #fff;
 }
 
-.pay-button ion-icon{
+.pay-button ion-icon {
   margin-right: 5px;
 }
 
@@ -474,7 +492,7 @@
 }
 
 .client-name {
-  text-transform:uppercase ;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
 }
@@ -495,6 +513,70 @@
 }
 
 .clients-activity {
-  background-color: blueviolet;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 89%;
+  border-radius: 5px;
+  padding: 16px 18px;
+}
+.clients-activity .tittle {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.activity-list-tittle {
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.activity-list-content {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 5px;
+}
+.activity-list-time {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+.activity-list {
+  padding: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.activity-list li {
+  padding: 0;
+  margin: 24px 0;
+  list-style: none;
+}
+
+.temp{
+  position: relative;
+  padding-left: 10px;
+}
+.marker {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #529fe8;
+  margin: 5px 8px 0px 0px ;
+  /* filter: blur(1px); */
+  left: -5px;
+  /* top: -3px; */
+  position: absolute;
+  
+}
+.activity-list-content {
+  padding-right: 34px;
+}
+
+.marker--2{
+  background-color: #fab041;
+}
+
+.marker--3{
+  background-color: #33D76B; 
+}
+ion-icon:hover{
+  cursor: pointer;
 }
