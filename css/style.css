@@ -13,6 +13,11 @@ html {
 
 /* BACKGROUND */
 
+img{
+  object-fit: cover;
+  cursor: pointer;
+}
+
 .background {
   margin: 0 auto;
   width: 1600px;
