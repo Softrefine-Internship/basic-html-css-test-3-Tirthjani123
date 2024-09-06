@@ -11,6 +11,10 @@ html {
   font-style: normal;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* BACKGROUND */
 
 img{
@@ -105,4 +109,8 @@ img{
   left: inherit;
   background-color: #f0c481;
   rotate: -25deg;
+}
+
+.temp2{
+  
 }
